@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <div class=" p-1 navbar navbar-expand-lg bg-dark navbar-dark d-flex justify-content-between ">
+      <div class="navbar-brand">
+       <a href="/"> <img style="border-radius:30%" class="img-fluid w-25" src="/Logos&&ServerSideImages/e Commerce Logo.png" alt=""></a>
+      </div>
+      <div>
+        <ul class="navbar-nav d-flex align-items-center ">
+            <li class="nav-item mx-3"><a class="nav-link" href="/products">View Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/category">Category List</a></li>
+         <li class="nav-item"><a class="nav-link" href="/category/add">Add a new Category</a></li>
+         
+        
+        </ul>
+      </div>
+      <ul class="navbar-nav">
+      <div class="input-group">
+        <input type="text" placeholder="Search..." class="" >
+       <button style="background-color:black" class="btn btn-dark" type="button" >  <i class="bi bi-search"></i> </button>
+       </div>
+    </ul>
+      <% if(user){%>
+       <div class="d-flex ">
+          <img class="mx-2" style="border-radius:50%; height:35px" src="<%= user.image %>" alt="">
+          <div>
+            <a style="color:white;height:25px;margin-top:-8px" href="/Logout"  class="nav-link" ><h4><i style="height:18px" class="bi bi-door-closed"></i></h4></a>
+          
+          </div>
+
+       </div>
+      <%} else{%>
+        <a style="background-color:grey"  class="btn"  href="/Login"> <span class="text-light">Login </span> </a>
+      <%}%>
+    
+
+    </div>
+
+ <%- body %>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+    "SessionSecret":"Something very very secret ",
+    "JWTKEY":"very secret key indeed",
+    "STRIPEKEY":"sk_test_51MQBxrBAMG50aPgKbdECGNcPCPCQDDshRCxbo5cx5BtwjnVSirDwAy8dpQpaiPopCqY7ucjbMPTOXdfsGB0CaK0S00rw9Us5He"
+}
